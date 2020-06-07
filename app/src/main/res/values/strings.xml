@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">ViewModelCase</string>
+    <string name="choose_city">Şehir seçiniz</string>
+    <string name="error">City error</string>
+    <string name="failed_city_filter">City filter error happened</string>
+    <string name="weather_error">WeatherData error happened</string>
+</resources>
