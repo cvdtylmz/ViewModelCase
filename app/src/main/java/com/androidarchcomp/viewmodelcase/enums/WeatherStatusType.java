@@ -9,17 +9,16 @@ import androidx.annotation.RequiresApi;
 import androidx.annotation.NonNull;
 
 public enum WeatherStatusType {
-    CLEAR ("Clear",0),
-    RAIN("Rain",1),
-    SNOW ("Snow",2),
-    CLOUDS ("Clouds",3);
+    CLEAR ("Clear"),
+    RAIN("Rain"),
+    SNOW ("Snow"),
+    CLOUDS ("Clouds");
 
     private final String name;
-    private final int index;
 
-    WeatherStatusType(String s, int i) {
+    WeatherStatusType(String s) {
         name = s;
-        index = i;
+
     }
 
     @NonNull
@@ -27,7 +26,7 @@ public enum WeatherStatusType {
         return this.name;
     }
 
-    public int toInteger () { return this.index;}
+    public int toInteger () { return this.ordinal();}
 
     public boolean equalsName(String otherName) {
         // (otherName == null) check is not needed because name.equals(null) returns false

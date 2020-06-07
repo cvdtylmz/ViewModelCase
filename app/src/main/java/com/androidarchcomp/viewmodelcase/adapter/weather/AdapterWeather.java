@@ -27,10 +27,8 @@ public class AdapterWeather extends RecyclerView.Adapter<AdapterWeather.WeatherD
     public AdapterWeather(WeatherViewModel viewModel, LifecycleOwner lifecycleOwner) {
         viewModel.getWeatherData().observe(lifecycleOwner, weatherData -> {
             data.clear();
-            if (weatherData != null) {
-                data.addAll(weatherData);
-                notifyDataSetChanged();
-            }
+            if (weatherData != null) data.addAll(weatherData);
+            notifyDataSetChanged();
         });
     }
 
